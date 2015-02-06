@@ -1,0 +1,21 @@
+Image Files
+	1) Lossless Files vs Lossy Files
+	2) Compressed vs Uncompressed
+	3) Raster Images - displaying an image as a grid of pixels.
+	4) Vector Images (eg SVG) - a list of drawing instructions.
+
+
+Colors
+	Pixel - 3 bytes (red, blue, green )
+
+
+
+
+NetPBM
+	All whitespace is the same.
+	File Format:
+		Header:
+		P3
+		XRES YRES
+		MAX COLOR VALUE
+		<list of pixel values>
