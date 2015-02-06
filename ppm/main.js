@@ -5,7 +5,7 @@
  * by Genji Noguchi
  */
 
-var mod = "./test2.js";
+var mod = "./concentric.js";
 var filename = "concentric.ppm";
 var ppm = "",
 	header = "P3",
