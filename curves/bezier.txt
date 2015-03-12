@@ -1,0 +1,55 @@
+Bezier Curves
+
+
+
+
+
+
+LINEAR
+
+
+Givens:
+P0,P3 : Endpoints
+P1,P2 : Points of influence
+
+
+
+
+P0 *------------*------------* P1
+				^
+				M0
+
+
+P2 *------------*------------* P1
+				^
+				M1
+
+
+P2 *------------*------------* P3
+				^
+				M2
+
+
+M0t = (1-t)P0 + tP1
+M1t = (1-t)P1 + tP2
+Qt  = (1-t)M0t+ tM1t
+
+
+
+
+
+N0-Quadratic P0P1P2
+N1-Quadratic P1P2P3
+
+
+
+(Ct) = (1-t)(N0t) + t(N1t)
+
+	 = (1-t)^3P0 + 3t(1-t)^2P1 + 3t^2(1-t)^2P2 + t^3P3
+
+
+
+
+
+
+
