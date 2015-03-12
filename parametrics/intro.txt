@@ -1,0 +1,12 @@
+Parametric Equations
+====================
+
+Regular Line : y = mx + b, f(x) = mx + b
+
+time parameter t.
+
+x = x(t) = x0 + t(dx)
+y = y(t) = y0 + t(dy)
+
+
+We can use parametric equations and lines in order to approximate circles and things.

@@ -1,0 +1,83 @@
+Bresenham's Line Algorithm
+==========================
+
+
+Case 1 of the line algorithm : Cut the 2d line into 8 pieces, known as octants. Octant 1 is restricted by the lines y = x and y = 0.
+
+
+The most basic line equation : 
+
+	y = mx + b
+
+However, most computers plot lines using two points.
+Algebra!
+
+	y = (Dy / Dx) (x) + b
+	
+To remove possible rational numbers,
+    
+    (Dx) (y) = (Dy)(x) + (b)(Dx)
+
+Let: 
+	A = Dy
+	B = -Dx
+	C = bDx
+
+Substitute : 
+	
+	0 = Ax + By + C
+
+	f(x, y) = Ax + By + C
+
+if f(x,y) > 0 :
+	(x,y) is below the line.
+if f(x,y) < 0 : 
+	(x,y) is above the line.
+if f(x,y) = 0 :
+	(x,y) is on the line.
+
+
+Now, you wouldn't want to inspect every single pixel. That would be inefficient.
+
+Possible next pixels :
+	1) (x+1, y)
+	2) (x+2, y)
+
+
+mp = (x0 + 1, y0 + 0.5)
+	if mp is above the line, plot lower pixel. (x+1, y)
+	if mp is below the line, plot upper pixel (x+1, y+1)
+
+
+To find the new value for d :
+	if d>0, then d = d+A+B
+	if d<0, then d = d+A
+
+
+Drafting the Algorithm
+	(x0, y0) -> (x, y)
+	x = x0, y = y0
+	d = A + .5B
+	while( x<x1 )
+		plot(x,y)
+		if(d>0)
+			y++
+			d+=B
+		x++
+		d += A
+
+
+
+Notes for 2/11/15 : Getting rid of that pesky 1/2.
+
+
+init d
+2d = 2A + B
+
+d if y->y+1
+d = d+A+B
+2d = 2d + 2A + 2B
+
+d if y->y
+d = d + A
+2d = 2d + 2A

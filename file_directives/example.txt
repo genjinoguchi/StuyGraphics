@@ -1,0 +1,14 @@
+// File that shows how you want to transform your point matrix.
+
+a		apply
+s
+1.5 1.5 1.5 	Scale x, y, and z by 1.5.
+l
+5 3 4 2 5 3		Create a new line
+I		Reset your transformation matrix back to the original.
+x
+20	 	rotate by the x axis 20 degrees
+g		
+pic.png	save as filename
+v		view
+

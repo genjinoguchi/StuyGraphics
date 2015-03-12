@@ -1,0 +1,5 @@
+Drawing Lines
+=============
+
+The best way of doing an edge list :
+P1P2 P2P3 P3P4 P4P5 etc

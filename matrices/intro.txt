@@ -1,0 +1,38 @@
+Tranformations
+==============
+
+* Affine Transformations
+	* Preserve the number of vertices
+	* Preserve the order of vertices
+* Scaling/Dilation
+	* (x, y, z) >>>> D(a,b,c) >>>>>> (ax, by, cz)
+	* [ a 0 0 0;
+		0 b 0 0;
+		0 0 c 0;
+		0 0 0 1] * [ x; y; z; 1 ] = [ax; by; cz; 1]
+* Moving/Translation
+	* (x, y, z) >>>> T(a,b,c) >>>>>> (x+a, y+b, z+c)
+	* [ 1 0 0 a;
+		0 1 0 b;
+		0 0 1 c; 
+		0 0 0 1 ] * [ x; y; z; 1 ] = [x+a; y+b; z+c; 1]
+	* It doesn't matter how many points are stored in the second matrix.	
+* Rotation about the origin
+	* Information you need-- an angle theta, and your axis (plane) of rotation.
+	* Rotation about the z axis
+	  [ cos -sin 0 0;
+		sin cos	 0 0;
+		0    0   1 0;
+		0    0   0 1] * [ x; y; z; 1] = [xcos - ycos; ycos + xsin; z; 1]
+	* Rotation about the x axis
+		[ 1 0 0 0;
+		  0 c-s 0;
+		  - s c 0;
+		  0 0 0 1] * point matrix
+	* Rotation about the y axis
+		[ c 0-s 0;
+		  0 1 0 0;
+		  s 0 c 0;
+		  0 0 0 1] * point matrix
+
+
